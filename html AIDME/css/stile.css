@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #77ADFF;
+}
+
+#logo
+{
+    width: 650px;
+    margin: auto;
+    
+}
+
+.container_box {
+    display: flex;
+    align-items: center;
+
+}
+.buttonintro {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+button {
+    width: 300px;
+    height: 45px;
+    border-radius: 100px;
+    border: none;
+    padding: 4px 0;
+    color: white;
+    text-align: center;
+}
+
+#btnLogin {
+    background-color: #4891FF;
+}
+
+#btnRegistrati {
+    background-color: #00388C;
+}
+
+
