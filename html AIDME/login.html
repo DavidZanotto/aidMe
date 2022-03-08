@@ -23,23 +23,22 @@
         <br>
         <div class="col-xs-12 col-lg-6" class="buttonIntro" style="text-align: center;">
 
-            <form action="reg.php">
-                <div class="container">
+            <form action="reg.php" method="post">
+
+                <div style="padding-bottom: 15%;">
                     Email
                     <br>
-                    <input type="text" placeholder="Email">
+                    <input type="text" value="email" placeholder="Email">
                     <br>
                     <br> Password
                     <br>
-                    <input type="password" placeholder="Password">
+                    <input type="password" value="password" placeholder="Password">
                 </div>
-                <br>
 
-                <div style="text-align: center;">
-                    <button id="btnRegistrati">
-                        Conferma
-                    </button>
-                </div>
+
+                <button id="btnRegistrati" value="invia">
+                    Conferma
+                </button>
             </form>
         </div>
 
