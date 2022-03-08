@@ -5,10 +5,10 @@
 <body>
 <?php
 	
-	$e=$_REQUEST["email"];
-	$n=$_REQUEST["nome"];
-	$tel=$_REQUEST["telefono"];
-	$p=$_REQUEST["password"];
+	$e=$_POST["email"];
+	$n=$_POST["nome"];
+	$tel=$_POST["telefono"];
+	$p=$_POST["password"];
 	echo "<h1>email passata:".$e."</h1>";
 	echo $n;
 	echo $tel;
