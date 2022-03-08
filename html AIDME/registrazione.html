@@ -32,24 +32,32 @@
                 Registrati
             </button>
             -->
-            <form action="reg.php">
+            <form action="reg.php" method="post">
+                Nome
+                <br>
+                <input type="text" value="nome" placeholder="Nome">
+                <br>
                 Email
                 <br>
-                <input type="text" placeholder="Email">
+                <input type="text" value="email" placeholder="Email">
                 <br>
                 <br> Password
                 <br>
-                <input type="password" placeholder="Password">
-                <br>
+                <input type="password" value="password" placeholder="Password">
+                <br><!--da implementare conferma password-->
                 <br> Numero di telefono
                 <br>
-                <input type="text" placeholder="Numero di telefono">
+                <input type="text" value="telefono" placeholder="Numero di telefono">
                 <br> <br>
+<<<<<<< HEAD
                 <input type="checkbox"> Privacy e trattamento dei dati personali
+=======
+                <input type="checkbox" value="privacy"> Privacy
+>>>>>>> 0bddecd69dff4399544d126fce37c1e535e51f4c
                 <br>
                 <br>
                 <br>
-                <button id="btnRegistrati">
+                <button id="btnRegistrati" value="invia">
                     Conferma
                 </button>
             </form>
