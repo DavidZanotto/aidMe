@@ -23,12 +23,12 @@
 */
 	$data = "2001-09-11";
 	$cognome = "rossi";
-
+/*
 	echo "<h1>email passata:".$nome."</h1>";	
 	echo "<h1>email passata:".$email."</h1>";	
 	echo "<h1>email passata:".$tel."</h1>";
 	echo "<h1>email passata:".$pass."</h1>";
-
+*/
     // selezione database
     mysqli_select_db($connect, $database)
         or die ("Impossibile selezionare il db");
@@ -46,7 +46,7 @@
 		$i = $search[id];
 
 	$i = $i+1;
-	print $i;
+	//print $i;
 	// libero la memoria occupata dall'istruzione SELECT
 	mysqli_free_result($result);
 
@@ -63,8 +63,11 @@
 
 	$result = mysqli_query($connect, $q2)
         or die ("Errore nella query" . mysqli_error($connect));
-
+	
 	mysqli_close($connect); 
+
+	echo "<meta http-equiv=\"refresh\" target=\"_blank\" content=\"0.1;URL=http://aidme.tk/login.html\">";
+
 ?>
 </body>
 </html>
