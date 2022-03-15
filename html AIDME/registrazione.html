@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/stile.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, intial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 
 <body>
@@ -21,39 +22,35 @@
         </div>
         <br>
         <br>
-        <div class="col-xs-12 col-lg-6" class="buttonIntro" style="text-align: center;">
-            <!--
-            <button id="btnLogin">
-                Login 
-            </button>
-            <br>
-            <br>
-            <button id="btnRegistrati">
-                Registrati
-            </button>
-            -->
+        <div class="col-xs-12 col-lg-6" class="buttonIntro">
+
             <form action="reg.php" method="post">
-                Nome
-                <br>
-                <input type="text" name="nome" placeholder="Nome">
-                <br> <br> Email
-                <br>
-                <input type="text" name="email" placeholder="email">
-                <br> <br> Password
-                <br>
-                <input type="password" name="password" placeholder="Password">
-                <br> <br>
-                <!--da implementare conferma password-->
-                Numero di telefono
-                <br>
-                <input type="text" name="telefono" placeholder="Numero di telefono">
-                <br> <br>
-                <input type="checkbox" name="privacy"> Privacy e trattamento dei dati personali
-                <br>
-                <br>
-                <br>
-                <button id="btnRegistrati" type="submit">
-                    Conferma
+                <div id="app">
+                    <div style="text-align: center;">
+                        Nickname
+                        <br>
+                        <input type="text" name="nickname" placeholder="Nickname">
+                        <br> <br> Email
+                        <br>
+                        <input type="text" name="email" placeholder="Email">
+                        <br> <br> Numero di telefono
+                        <br>
+                        <input type="text" name="telefono" placeholder="Numero di telefono">
+                        <br> <br>
+                        <!--da implementare conferma password-->
+                        Password
+                        <br>
+                        <input type="password" id="campo" name="password" v-model="password" placeholder="Password">
+                        <span id="occhio" class="glyphicon glyphicon-eye-open" onClick="cambia()"></span>
+                    </div>
+                    <br>
+                    <div style="padding-left: 25%;">
+                        {{ lunghezza }} <br> {{ letteraMaiuscola }} <br> {{ numero }} <br> {{ charSpeciale }}
+                    </div>
+                </div>
+
+                <button id="btnRegistrati" type="submit" style="margin-top: 10%;">
+                    Avanti
                 </button>
             </form>
         </div>
@@ -64,7 +61,54 @@
 
 
 
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                password: '',
+            },
+            computed: {
+                lunghezza() {
+                    if (this.password.length < 8) {
+                        return "Minimo 8 caratteri"
+                    } else {
+                        return "";
+                    }
+                },
+                letteraMaiuscola() {
+                    if (this.password.match(/[A-Z]/)) {
+                        return "";
+                    } else {
+                        return "Almeno una maiuscola";
+                    }
+                },
+                numero() {
+                    if (this.password.match(/[1 2 3 4 5 6 7 8 9]/)) {
+                        return "";
+                    } else {
+                        return "Serve almeno un numero";
+                    }
+                },
+                charSpeciale() {
+                    if (this.password.match(/[! " £ $ % & / ( ) = ? ^"]/)) {
+                        return "";
+                    } else {
+                        return "Serve almeno un carattere speciale";
+                    }
+                },
+            }
+        });
 
+        function cambia() {
+            if (document.getElementById("campo").type == "password") {
+                document.getElementById("campo").type = "text";
+                document.getElementById("occhio").className = "glyphicon glyphicon-eye-close";
+            } else {
+                document.getElementById("campo").type = "password";
+                document.getElementById("occhio").className = "glyphicon glyphicon-eye-open";
+            }
+        }
+    </script>
 
 
     <!-- IN FONDO ALL'HTML -->
