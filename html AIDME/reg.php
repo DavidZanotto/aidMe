@@ -43,7 +43,7 @@
 	
 	// Visualizzo il risultato della query
 	while ($search = mysqli_fetch_array($result))
-		$i = $search[id];
+		$i = $search[$id];
 
 	$i = $i+1;
 	//print $i;
