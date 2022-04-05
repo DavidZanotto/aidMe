@@ -4,17 +4,25 @@
 </head>
 <body>
 <?php
+	session_start();
 	//nella tabella Utenti manca il numero di telefono dell'utente stesso
 	include("parametri.php");
-	
+
+	//salvataggio dei parametri
+		$email=$_POST["email"];
+		$pass=$_POST["password"];
+
+	//gestione della sessione, salvataggio in sessione del nome e email dell'utente
+
+	$_SESSION['emailUtente'] = $email;
+	$_SESSION['nomeUtente'] = "default";
+	echo "<h1>Sessione:".$_SESSION['emailUtente']."</h1>";
 	// Connessione al server dbms
 	$connect = mysqli_connect($server, $username, $password)
 		or die("Connessione non riuscita: " . mysqli_error($connect));
 	print ("Connesso con successo <br />");
 
-	//salvataggio dei parametri
-	$email=$_POST["email"];
-	$pass=$_POST["password"];
+
 /*
 	$data=$_POST["nome"];
 	$cognome=$_POST["nome"];
@@ -37,13 +45,15 @@
 	while ($search = mysqli_fetch_array($result)){
         /*print "$search[Email]". " $search[Password]";
         print $email . $pass. "<br>";*/
-		if($email == $search[Email] && $pass == $search[Password] && $pass =! ""){
+		if($email == $search['Email'] && $pass == $search['Password'] && $pass =! ""){
             $b=true;
         }
     }
 
     if($b)print "login esguito correttamente";
-	
+	echo "<a href='index.php'>Torna alla home</a>";
+	echo "<a href='logout.php'>Logout</a>";
+	echo "<a href='Contatti.php'>Contatti</a>";
 	mysqli_free_result($result);
 
 	mysqli_close($connect); 
