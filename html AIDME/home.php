@@ -17,5 +17,8 @@
             header("Location: index.html");
         }
     ?>
+	<a href='home.php'>Torna alla home</a><br>
+	<a href='logout.php'>Logout</a><br>
+	<a href='Contatti.php'>Contatti</a><br>
 </body>
 </html>

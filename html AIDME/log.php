@@ -38,20 +38,22 @@
 	// Visualizzo il risultato della query
 	while ($search = mysqli_fetch_array($result)){
 		if($email == $search['Email'] && $pass == $search['Password'] && $pass =! ""){
-            $b=true;
+            $_SESSION['login']=true;
         }
     }
 
-    if($b)print "login esguito correttamente";
-	//echo "<meta http-equiv='refresh' content='0; url=home.php'>";
+    if($_SESSION['login']){
+		header("Location: home.php");
+	}
+	else{
+		$_SESSION['login'] = false;
+		header("Location: login.hmtl");
+	}
 	mysqli_free_result($result);
 
 	mysqli_close($connect); 
 ?>
 
-	<a href='home.php'>Torna alla home</a><br>
-	<a href='logout.php'>Logout</a><br>
-	<a href='Contatti.php'>Contatti</a><br>
 
 </body>
 </html>
