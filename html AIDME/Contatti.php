@@ -39,11 +39,20 @@
     // connessione al database AidMe
     // estrai Nome, Cognome e telefono dalla tabella NumeriEmergenze
     // e li visualizza
+
     include("parametri.php");
     $connect = mysqli_connect($server, $username, $password)
         or die("Connessione non riuscita: " . mysqli_error($connect));
     mysqli_select_db($connect, $database)
         or die("Impossibile selezionare il db");
+
+    if(isset($_GET['id'])){
+        //elimina il contatto con id = $_GET['id']
+        $query = "DELETE FROM NumeriEmergenze WHERE id = '".$_GET['id']."'";
+        $result = mysqli_query($connect, $query)
+            or die("Errore nella query" . mysqli_error($connect));
+    }
+    
     $query = "SELECT id, Nome, Cognome, Telefono FROM NumeriEmergenze";
     $result = mysqli_query($connect, $query)
         or die("Errore nella query" . mysqli_error($connect));
@@ -67,10 +76,10 @@
         echo "<input type='hidden' name='id' value='".$search['id']."'>";
         echo "<input type='submit' value='Modifica'>";
         echo "</form></td>";
-        /*
-        print("<td><button><a href=\"Modifica.php\">Modifica</a></button></td>");
-        $_SESSION['idModifica'] = $search['id'];*/
-        print("<td><button><a href=\"Elimina.php\">Elimina</a></button></td>");
+        echo "<td><form action='Contatti.php' method='get'>";
+        echo "<input type='hidden' name='id' value='".$search['id']."'>";
+        echo "<input type='submit' value='Elimina'>";
+        echo "</form></td>";
         print("</tr>");
         print("</table>");
     }

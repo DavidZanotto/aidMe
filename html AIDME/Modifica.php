@@ -41,11 +41,11 @@
         echo "<form action='Modifica.php' method='post'>";
         echo "Nome: <br>";
         echo "<input type=\"text\" name=\"nome\" placeholder=\"Nome\">";
-        echo "Cognome: <br>";
+        echo "<br>Cognome: <br>";
         echo "<input type=\"text\" name=\"cognome\" placeholder=\"Cognome\">";
-        echo "Numero di telefono: <br>";
+        echo "<br>Numero di telefono: <br>";
         echo "<input type=\"text\" name=\"telefono\" placeholder=\"Telefono\">";
-        echo "<input type=\"submit\" value=\"Modifica\">";
+        echo "<br><input type=\"submit\" value=\"Modifica\">";
 
         if($_POST['nome'] != ""){
             $nome = $_POST['nome'];
