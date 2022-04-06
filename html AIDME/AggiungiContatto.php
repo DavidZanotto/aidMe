@@ -98,6 +98,10 @@
         print("<td>Telefono:</td>");
         print("<td>".$search['Telefono']."</td>");
         print("</tr>");
+        print("<tr>");
+        print("<td><button><a href=\"Modifica.php\"></a>Modifica</button></td>");
+        print("<td><button><a href=\"Elimina.php\"></a>Elimina</button></td>");
+        print("</tr>");
         print("</table>");
     }
     // libero la memoria occupata dall'istruzione SELECT

@@ -44,7 +44,7 @@
         or die("Connessione non riuscita: " . mysqli_error($connect));
     mysqli_select_db($connect, $database)
         or die("Impossibile selezionare il db");
-    $query = "SELECT Nome, Cognome, Telefono FROM NumeriEmergenze";
+    $query = "SELECT id, Nome, Cognome, Telefono FROM NumeriEmergenze";
     $result = mysqli_query($connect, $query)
         or die("Errore nella query" . mysqli_error($connect));
     while ($search = mysqli_fetch_array($result)) {
@@ -62,6 +62,16 @@
         print("<td>Telefono:</td>");
         print("<td>".$search['Telefono']."</td>");
         print("</tr>");
+        print("<tr>");
+        echo "<td><form action='Modifica.php' method='get'>";
+        echo "<input type='hidden' name='id' value='".$search['id']."'>";
+        echo "<input type='submit' value='Modifica'>";
+        echo "</form></td>";
+        /*
+        print("<td><button><a href=\"Modifica.php\">Modifica</a></button></td>");
+        $_SESSION['idModifica'] = $search['id'];*/
+        print("<td><button><a href=\"Elimina.php\">Elimina</a></button></td>");
+        print("</tr>");
         print("</table>");
     }
     // libero la memoria occupata dall'istruzione SELECT
@@ -70,6 +80,13 @@
     mysqli_close($connect);
 
     ?>
+    <button onclick="salvaId()"></button>
+    <script>
+        salvaId = function() {
+            var id = document.getElementById("id").value;
+            document.cookie = "id=" + id;
+        }
+    </script>
 </body>
 
 </html>
