@@ -18,10 +18,22 @@ body {
     margin: auto;
 }
 
+#btnLogin {
+    background-color: #4891FF;
+}
+
+#btnRegistrati {
+    background-color: #00388C;
+}
+
 .buttonIntro {
     text-align: center;
-    font-family: 'Outfit', sans-serif;
+    /* font-family: 'Outfit', sans-serif; */
     font-size: 18px;
+}
+
+#box-centered {
+    text-align: center;
 }
 
 button {
@@ -32,6 +44,19 @@ button {
     padding: 4px 0;
     color: white;
     text-align: center;
+}
+
+.box {
+    padding-bottom: 15%;
+}
+
+#passDimenticata a {
+    color: #005BB2;
+    font-size: 14px;
+}
+
+#passDimenticata a {
+    text-decoration: none;
 }
 
 input[type=text],
@@ -45,10 +70,9 @@ input[type=password] {
     text-align: center;
 }
 
-#btnLogin {
-    background-color: #4891FF;
-}
 
-#btnRegistrati {
-    background-color: #00388C;
+/* PASSWORD ERROR */
+
+.error {
+    background-color: #ffa6a6;
 }
