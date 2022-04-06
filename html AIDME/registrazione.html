@@ -20,38 +20,43 @@
         <div class="col-xs-12 col-lg-6">
             <img class="img-responsive" id="logo" src="imgAidMe/logo1.png">
         </div>
-        <br>
-        <br>
-        <div class="col-xs-12 col-lg-6" class="buttonIntro">
+
+        <div class="col-xs-12 col-lg-6">
 
             <form action="reg.php" method="post">
                 <div id="app">
-                    <div style="text-align: center;">
-                        Nickname
+                    <div class="box">
+                        <div id="box-centered" class="buttonIntro">
+                            Nickname
+                            <br>
+                            <input type="text" name="nickname" placeholder="Nickname">
+                            <br> <br> Email
+                            <br>
+                            <input type="text" name="email" placeholder="Email">
+                            <br> <br> Numero di telefono
+                            <br>
+                            <input type="text" name="telefono" placeholder="Numero di telefono">
+                            <br> <br>
+                            <!--da implementare conferma password-->
+                            Password
+                            <br>
+                            <input type="password" :class="{
+                            'error': !isPasswordValid,
+                            }" id="campo" name="password" v-model="password" placeholder="Password" style="margin-left: 15px;">
+                            <span id="occhio" class="glyphicon glyphicon-eye-close" onClick="cambia()"></span>
+                        </div>
                         <br>
-                        <input type="text" name="nickname" placeholder="Nickname">
-                        <br> <br> Email
-                        <br>
-                        <input type="text" name="email" placeholder="Email">
-                        <br> <br> Numero di telefono
-                        <br>
-                        <input type="text" name="telefono" placeholder="Numero di telefono">
-                        <br> <br>
-                        <!--da implementare conferma password-->
-                        Password
-                        <br>
-                        <input type="password" id="campo" name="password" v-model="password" placeholder="Password">
-                        <span id="occhio" class="glyphicon glyphicon-eye-open" onClick="cambia()"></span>
-                    </div>
-                    <br>
-                    <div style="padding-left: 25%;">
-                        {{ lunghezza }} <br> {{ letteraMaiuscola }} <br> {{ numero }} <br> {{ charSpeciale }}
+                        <div style="padding-left: 25%; font-size: 14px;">
+                            {{ lunghezza }} <br> {{ letteraMaiuscola }} <br> {{ numero }} <br> {{ charSpeciale }}
+                        </div>
                     </div>
                 </div>
 
-                <button id="btnRegistrati" type="submit" style="margin-top: 10%;">
-                    Avanti
-                </button>
+                <div class="buttonIntro">
+                    <button id="btnRegistrati" type="submit">
+                        Avanti
+                    </button>
+                </div>
             </form>
         </div>
 
@@ -68,6 +73,9 @@
                 password: '',
             },
             computed: {
+                isPasswordValid() {
+                    return this.password == '' || this.password.length > 8 && this.password.match(/[A-Z]/) && this.password.match(/[1 2 3 4 5 6 7 8 9]/) && this.password.match(/[! " £ $ % & / ( ) = ? ^"]/)
+                },
                 lunghezza() {
                     if (this.password.length < 8) {
                         return "Minimo 8 caratteri"
@@ -96,6 +104,9 @@
                         return "Serve almeno un carattere speciale";
                     }
                 },
+                methods: {
+
+                }
             }
         });
 
