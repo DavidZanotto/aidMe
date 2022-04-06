@@ -19,34 +19,32 @@
         <div class="col-xs-12 col-lg-6">
             <img class="img-responsive" id="logo" src="imgAidMe/logo1.png">
         </div>
-        <br>
-        <br>
-        <div class="col-xs-12 col-lg-6" class="buttonIntro" style="text-align: center;">
 
-            <form action="reg.php" method="post">
-                Nome
-                <br>
-                <input type="text" name="nome" placeholder="Nome">
-                <br> <br> Cognome
-                <br>
-                <input type="text" name="cognome" placeholder="Cognome">
-                <br> <br> Data di nascita
-                <br>
-                <input type="text" name="dataNascita" placeholder="Data di nascita">
-                <br> <br>
-                <!--da implementare conferma password-->
-                Codice fiscale
-                <br>
-                <input type="text" name="codiceFiscale" placeholder="Codice fiscale">
-                <br> <br>
-                <input type="checkbox" name="privacy"> Privacy e trattamento dei dati personali
-                <br>
-                <br>
-                <br>
-                <button id="btnRegistrati" type="submit">
-                    Conferma
-                </button>
-            </form>
+        <div class="col-xs-12 col-lg-6 buttonIntro">
+            <div id="box-centered">
+                <form action="reg.php" method="post">
+                    <div class="box">
+                        Nome
+                        <br>
+                        <input type="text" name="nome" placeholder="Nome">
+                        <br> <br> Cognome
+                        <br>
+                        <input type="text" name="cognome" placeholder="Cognome">
+                        <br> <br> Data di nascita
+                        <br>
+                        <input type="text" name="dataNascita" placeholder="Data di nascita">
+                        <br> <br> Codice fiscale
+                        <br>
+                        <input type="text" name="codiceFiscale" placeholder="Codice fiscale">
+                        <br> <br>
+                        <input type="checkbox" name="privacy" required> Privacy e trattamento dei dati personali
+                    </div>
+
+                    <button id="btnRegistrati" type="submit">
+                        Conferma
+                    </button>
+                </form>
+            </div>
         </div>
 
 
