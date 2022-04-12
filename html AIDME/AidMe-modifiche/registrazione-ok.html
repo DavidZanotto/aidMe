@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <title>Inserisci il titolo</title>
+    <meta name="description" content="Inserisci la descrizione">
+
+    <!-- DA AGGIUNGERE in HEAD -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/stile.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div class="container_box container-fluid">
+        <div class="col-xs-12 col-lg-6">
+            <img class="img-responsive" id="logo" src="imgAidMe/logo1.png">
+        </div>
+
+        <div class="col-xs-12 col-lg-6">
+
+            <form action="reg.php" method="post">
+                <div id="app">
+                    <div class="box">
+                        <div id="box-centered" class="buttonIntro">
+                            Nickname
+                            <br>
+                            <input type="text" name="nickname" placeholder="Nickname">
+                            <br> <br> Email
+                            <br>
+                            <input type="text" name="email" placeholder="Email">
+                            <br> <br> Numero di telefono
+                            <br>
+                            <input type="text" name="telefono" placeholder="Numero di telefono">
+                            <br> <br>
+                            <!--da implementare conferma password-->
+                            Password
+                            <br>
+                            <input type="password" :class="{
+                            'error': !isPasswordValid,
+                            }" id="campo" name="password" v-model="password" placeholder="Password" style="margin-left: 15px;">
+                            <span id="occhio" class="glyphicon glyphicon-eye-close" onClick="cambia()"></span>
+                        </div>
+                        <br>
+                        <div style="padding-left: 25%; font-size: 14px;">
+                            {{ lunghezza }} <br> {{ letteraMaiuscola }} <br> {{ numero }} <br> {{ charSpeciale }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttonIntro">
+                    <button id="btnRegistrati" type="submit">
+                        Avanti
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                password: '',
+            },
+            computed: {
+                isPasswordValid() {
+                    return this.password == '' || this.password.length > 8 && this.password.match(/[A-Z]/) && this.password.match(/[1 2 3 4 5 6 7 8 9]/) && this.password.match(/[! " £ $ % & / ( ) = ? ^"]/)
+                },
+                lunghezza() {
+                    if (this.password.length < 8) {
+                        return "Minimo 8 caratteri"
+                    } else {
+                        return "";
+                    }
+                },
+                letteraMaiuscola() {
+                    if (this.password.match(/[A-Z]/)) {
+                        return "";
+                    } else {
+                        return "Almeno una maiuscola";
+                    }
+                },
+                numero() {
+                    if (this.password.match(/[1 2 3 4 5 6 7 8 9]/)) {
+                        return "";
+                    } else {
+                        return "Serve almeno un numero";
+                    }
+                },
+                charSpeciale() {
+                    if (this.password.match(/[! " £ $ % & / ( ) = ? ^"]/)) {
+                        return "";
+                    } else {
+                        return "Serve almeno un carattere speciale";
+                    }
+                },
+                methods: {
+
+                }
+            }
+        });
+
+        function cambia() {
+            if (document.getElementById("campo").type == "password") {
+                document.getElementById("campo").type = "text";
+                document.getElementById("occhio").className = "glyphicon glyphicon-eye-close";
+            } else {
+                document.getElementById("campo").type = "password";
+                document.getElementById("occhio").className = "glyphicon glyphicon-eye-open";
+            }
+        }
+    </script>
+
+
+    <!-- IN FONDO ALL'HTML -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
