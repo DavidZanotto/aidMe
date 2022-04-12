@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <title>Inserisci il titolo</title>
+    <meta name="description" content="Inserisci la descrizione">
+
+    <!-- DA AGGIUNGERE in HEAD -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/stile.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <style>
+        @media only screen and (min-width: 240px) and (max-width: 767px) {
+            #pic {
+                text-align: center;
+            }
+            #inputModifica input {}
+        }
+        
+        @media only screen and (min-width: 768px) {
+            #pic {
+                text-align: right;
+            }
+            #inputModifica input {
+                float: left;
+            }
+        }
+        
+        body {
+            background-color: #005BB2;
+        }
+        
+        .acc {
+            margin: 15px;
+        }
+        
+        #inputModifica input {
+            margin: 5px;
+            text-align: left;
+            padding-left: 20px;
+        }
+        
+        button {
+            background-color: #4891FF;
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+        }
+        
+        .ok {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="impostazioni.html">
+        <svg style="float:left; margin-left:20px" width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.16667 25C4.16667 19.4746 6.36161 14.1756 10.2686 10.2686C14.1756 6.36159 19.4747 4.16666 25 4.16666C27.7359 4.16666 30.445 4.70553 32.9726 5.7525C35.5002 6.79947 37.7968 8.33404 39.7314 10.2686C41.6659 12.2032 43.2005 14.4998 44.2475 17.0274C45.2945 19.555 45.8333 22.2641 45.8333 25C45.8333 30.5253 43.6384 35.8244 39.7314 39.7314C35.8244 43.6384 30.5253 45.8333 25 45.8333C22.2641 45.8333 19.555 45.2944 17.0274 44.2475C14.4998 43.2005 12.2032 41.6659 10.2686 39.7314C6.36161 35.8244 4.16667 30.5253 4.16667 25ZM37.5 22.9167H20.8333L28.125 15.625L25.1667 12.6667L12.8333 25L25.1667 37.3333L28.125 34.375L20.8333 27.0833H37.5V22.9167Z" fill="#77ADFF"/>
+        </svg>
+    </a>
+
+    <h1 style="text-align: center;margin-right: 60px;">MODIFICA CONTATTI</h1>
+
+    <div style="text-align: center;">
+        <div style="font-size:20px; margin: 20px;">
+            Aggiungi contatto
+        </div>
+        <div class="container-fluid">
+            <div class="col-lg-6 col-xs-12" id="pic">
+                <svg width="170" height="166" viewBox="0 0 170 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M78 134.16C58.5 134.16 41.262 124.176 31.2 109.2C31.434 93.6 62.4 85.02 78 85.02C93.6 85.02 124.566 93.6 124.8 109.2C114.738 124.176 97.5 134.16 78 134.16ZM78 23.4C84.2061 23.4 90.1579 25.8654 94.5463 30.2537C98.9346 34.6421 101.4 40.5939 101.4 46.8C101.4 53.0061 98.9346 58.958 94.5463 63.3463C90.1579 67.7346 84.2061 70.2 78 70.2C71.7939 70.2 65.842 67.7346 61.4537 63.3463C57.0653 58.958 54.6 53.0061 54.6 46.8C54.6 40.5939 57.0653 34.6421 61.4537 30.2537C65.842 25.8654 71.7939 23.4 78 23.4ZM78 4.67645e-09C67.7569 4.06232e-09 57.6141 2.01753 48.1507 5.9374C38.6873 9.85726 30.0886 15.6027 22.8457 22.8457C8.21783 37.4735 -3.43616e-09 57.3131 -4.67645e-09 78C-5.9167e-09 98.6869 8.21783 118.526 22.8457 133.154C30.0886 140.397 38.6873 146.143 48.1507 150.063C57.6141 153.982 67.7569 156 78 156C98.6869 156 118.526 147.782 133.154 133.154C147.782 118.526 156 98.6869 156 78C156 34.866 120.9 7.24849e-09 78 4.67645e-09Z" fill="white"/>
+                    <a href="#"><path d="M141.5 113.75C128.366 113.75 117.75 124.366 117.75 137.5C117.75 150.634 128.366 161.25 141.5 161.25C154.634 161.25 165.25 150.634 165.25 137.5C165.25 124.366 154.634 113.75 141.5 113.75ZM148.863 125.791C149.195 125.791 149.528 125.91 149.812 126.171L152.829 129.188C153.375 129.71 153.375 130.541 152.829 131.04L150.454 133.415L145.585 128.546L147.96 126.171C148.198 125.91 148.53 125.791 148.863 125.791ZM144.184 129.924L149.076 134.816L134.684 149.209L129.791 149.209L129.791 144.316L144.184 129.924Z" fill="#77ADFF"/>
+                    </a>
+                </svg>
+            </div>
+            <div class="col-lg-6 col-xs-12" id="inputModifica">
+                <input type="text" placeholder="Nome"> <br>
+                <input type="text" placeholder="Cognome"> <br>
+                <input type="text" placeholder="+39">
+            </div>
+        </div>
+        <div>
+            <button id="btnSa">Salva contatto</button>
+        </div>
+    </div>
+    <hr>
+    <div>
+        Modifica contatti gia&grave; esistenti
+        <br>
+        <div>
+            <div class="ok">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 30.1C13.125 30.1 9.2575 27.86 7 24.5C7.0525 21 14 19.075 17.5 19.075C21 19.075 27.9475 21 28 24.5C25.7425 27.86 21.875 30.1 17.5 30.1ZM17.5 5.25C18.8924 5.25 20.2277 5.80312 21.2123 6.78769C22.1969 7.77226 22.75 9.10761 22.75 10.5C22.75 11.8924 22.1969 13.2277 21.2123 14.2123C20.2277 15.1969 18.8924 15.75 17.5 15.75C16.1076 15.75 14.7723 15.1969 13.7877 14.2123C12.8031 13.2277 12.25 11.8924 12.25 10.5C12.25 9.10761 12.8031 7.77226 13.7877 6.78769C14.7723 5.80312 16.1076 5.25 17.5 5.25ZM17.5 1.0492e-09C15.2019 9.11419e-10 12.9262 0.452651 10.803 1.33211C8.67984 2.21157 6.75066 3.50061 5.12563 5.12563C1.84374 8.40752 -7.70934e-10 12.8587 -1.0492e-09 17.5C-1.32747e-09 22.1413 1.84374 26.5925 5.12563 29.8744C6.75066 31.4994 8.67984 32.7884 10.803 33.6679C12.9262 34.5474 15.2019 35 17.5 35C22.1413 35 26.5925 33.1563 29.8744 29.8744C33.1563 26.5925 35 22.1413 35 17.5C35 7.8225 27.125 1.62626e-09 17.5 1.0492e-09Z" fill="white"/>
+            </svg>
+            </div>
+            <div class="ok">Nome Cognome</div>
+        </div>
+    </div>
+
+    <!-- IN FONDO ALL'HTML -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js " type="text/javascript "></script>
+    <script src="js/bootstrap.js "></script>
+
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById("output");
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+
+</body>
+
+</html>
