@@ -20,5 +20,6 @@
 	<a href='home.php'>Torna alla home</a><br>
 	<a href='logout.php'>Logout</a><br>
 	<a href='Contatti.php'>Contatti</a><br>
+	<a href='ModificaUtente.php'>Modifica Account</a><br>
 </body>
 </html>
