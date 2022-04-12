@@ -1,0 +1,191 @@
+@media only screen and (min-width: 1024px) {
+    .container_box {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #77ADFF;
+    color: white;
+}
+
+#bodyBg {
+    background-color: #00388C;
+}
+
+#logo {
+    width: 650px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#btnLogin {
+    background-color: #4891FF;
+}
+
+#btnRegistrati {
+    background-color: #00388C;
+}
+
+.buttonIntro {
+    text-align: center;
+    /* font-family: 'Outfit', sans-serif; */
+    font-size: 18px;
+}
+
+#box-centered {
+    text-align: center;
+}
+
+button {
+    width: 300px;
+    height: 45px;
+    border-radius: 100px;
+    border: none;
+    padding: 4px 0;
+    color: white;
+    text-align: center;
+}
+
+.box {
+    padding-bottom: 15%;
+}
+
+#passDimenticata a {
+    color: #005BB2;
+    font-size: 14px;
+}
+
+#passDimenticata a {
+    text-decoration: none;
+}
+
+input[type=text],
+input[type=password] {
+    width: 300px;
+    height: 45px;
+    border-radius: 100px;
+    border: none;
+    padding: 4px 0;
+    color: black;
+    text-align: center;
+}
+
+
+/* account + impostazioni */
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.margin {
+    margin: 15px;
+}
+
+#backIcon {
+    float: left;
+    margin-left: 20px
+}
+
+h1#h1Margin {
+    text-align: center;
+    margin-right: 60px;
+}
+
+#boxAccount {
+    padding: 0 20px;
+    text-align: center;
+}
+
+#buttonSalva {
+    background-color: #4891FF;
+    color: white;
+    margin-top: 50px;
+}
+
+#buttonElimina {
+    background-color: #F32D2D;
+    color: white;
+}
+
+#paragraph {
+    padding: 0 20px;
+}
+
+
+/* impostazioni */
+
+.impostazioniIcon {
+    float: left;
+    margin-right: 20px
+}
+
+.svgImpostazioni {
+    float: left;
+    margin-right: 20px
+}
+
+.textImpostazioni {
+    line-height: 41px;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+
+/* impAcc1 */
+
+#impAcc1Box,
+#impAcc2Box {
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0px 0px -150px;
+    background-color: #77ADFF;
+    font-size: 20px;
+}
+
+.btnImpAcc1 {
+    width: 110px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+#btnAnnulla {
+    background-color: white;
+    color: #00388C;
+}
+
+#btnConferma {
+    background-color: #00388C;
+}
+
+
+/* modificaContatti */
+
+
+/* PASSWORD ERROR */
+
+.error {
+    background-color: #ffa6a6;
+}
