@@ -1,3 +1,19 @@
+@media only screen and (min-width: 240px) and (max-width: 767px) {
+    #pic {
+        text-align: center;
+    }
+    #inputModifica input {}
+}
+
+@media only screen and (min-width: 768px) {
+    #pic {
+        text-align: right;
+    }
+    #inputModifica input {
+        float: left;
+    }
+}
+
 @media only screen and (min-width: 1024px) {
     .container_box {
         display: flex;
@@ -22,6 +38,10 @@ body {
     background-color: #00388C;
 }
 
+#bodyBg2 {
+    background-color: #005BB2;
+}
+
 #logo {
     width: 650px;
     margin: auto;
@@ -41,7 +61,6 @@ h1 {
 
 .buttonIntro {
     text-align: center;
-    /* font-family: 'Outfit', sans-serif; */
     font-size: 18px;
 }
 
@@ -96,7 +115,7 @@ a:hover {
 }
 
 .margin {
-    margin: 15px;
+    margin: 20px;
 }
 
 #backIcon {
@@ -131,16 +150,6 @@ h1#h1Margin {
 
 
 /* impostazioni */
-
-.impostazioniIcon {
-    float: left;
-    margin-right: 20px
-}
-
-.svgImpostazioni {
-    float: left;
-    margin-right: 20px
-}
 
 .textImpostazioni {
     line-height: 41px;
@@ -182,6 +191,149 @@ h1#h1Margin {
 
 
 /* modificaContatti */
+
+#btnSalvaContatto {
+    background-color: #4891FF;
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.prova {
+    display: block;
+}
+
+
+/* ContattiSicuriUtilizzo*/
+
+.box-centrato {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box {
+    width: 340px;
+    height: 530px;
+    background-color: #005BB2;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.margin-bottom {
+    margin-bottom: 10px;
+}
+
+.textContatti {
+    margin-left: 20px;
+    border-bottom: 1px solid white;
+    width: 85%;
+}
+
+.floatLeft {
+    float: left;
+    margin-right: 20px
+}
+
+.textContatti2 {
+    line-height: 35px;
+}
+
+#btnModifica {
+    background-color: white;
+    color: #00388C;
+    font-weight: bold;
+}
+
+
+/* richiestaInviata */
+
+#textRichiesta {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+}
+
+#btnRichiesta {
+    text-align: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 20px;
+}
+
+#btnChiusura {
+    text-align: center;
+    margin-top: 150px;
+}
+
+
+/* visualizzaContatti*/
+
+.imgContatti {
+    float: left;
+    margin: 0 20px;
+}
+
+.lineHeight {
+    line-height: 50px;
+}
+
+#btnChiusura2 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+/* logout */
+
+#logoutBox {
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0px 0px -150px;
+    background-color: #00388C;
+    font-size: 20px;
+}
+
+#btnAnnullaLogout {
+    background-color: white;
+    color: #00388C;
+}
+
+#btnConfermaLogout {
+    background-color: #77ADFF;
+    color: #00388C;
+}
+
+
+/* richiestaAnnullata*/
+
+#boxRichiestaAnnullata {
+    width: 350px;
+    height: 250px;
+    background-color: #005BB2;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+#btnChiusura3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#textRichiestaAnnullata {
+    font-size: 32px;
+    text-align: center;
+    margin: 20px
+}
 
 
 /* PASSWORD ERROR */
